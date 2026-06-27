@@ -1,0 +1,10 @@
+- name: Test Windows connection
+  hosts: windows
+  tasks:
+    - name: Ping Windows host
+      ansible.windows.win_ping:
+
+    - name: Create a folder
+      ansible.windows.win_file:
+        path: C:\ansible_test
+        state: directory
